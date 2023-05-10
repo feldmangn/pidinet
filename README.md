@@ -20,6 +20,7 @@ If you find something useful from our work, please consider citing [our paper](p
 :rocket: **Updates**:
 - `Dec. 29, 2021`: Add functions with vanilla conv components in [models/ops\_theta.py](models/ops_theta.py)
 - `Aug. 18, 2021`: Load checkpoints in [trained\_models](trained_models)
+- `May 10, 2023`: Package in this repo are ready to use immediantly
 
 ## Running environment
 
