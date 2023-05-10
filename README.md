@@ -45,13 +45,13 @@ To create BSDS dataset, please follow:
 3. extract *PASCAL.tar.gz* to */path/to/BSDS500/PASCAL*,
 4. if you want to evaluate on BSDS500 val set, the val images can be downloaded from [this link](https://drive.google.com/file/d/1q0jdUM9PStWT12o1RgTLOKOXN3Ql5OxS/view?usp=sharing), please extract it to */path/to/BSDS500/HED-BSDS/val*,
 5. cp the \**.lst* files in [data/BSDS500/HED-BSDS](data/BSDS500/HED-BSDS) to */path/to/BSDS500/HED-BSDS/*, cp the \**.lst* files in [data/BSDS500](data/BSDS500) to */path/to/BSDS500/*.
-
+ 
 To create NYUD dataset, please follow:
 
 1. create a folder */path/to/NYUD*,
 2. extract *NYUD.tar.gz* to */path/to/NYUD*,
 3. cp the \**.lst* files in [data/NYUD](data/NYUD) to */path/to/NYUD/*.
-
+4. There are already 4 checkpoint files included in this model in order to help get started with this model quciker. These contain the weights for your custom image run, and were generated on this dataset.
 
 ## Training, and Generating edge maps
 
@@ -121,7 +121,9 @@ Please follow [plot-edge-pr-curves](https://github.com/MCG-NKU/plot-edge-pr-curv
 ```bash
 python main.py --model pidinet_converted --config carv4 --sa --dil -j 4 --gpu 0 --savedir /path/to/savedir --datadir /path/to/custom_images --dataset Custom --evaluate /path/to/table5_pidinet/save_models/checkpointxxx.pth --evaluate-converted
 ```
-
+OSX Users- clear .DS_Store in the file that contains your custom images with 
+find . -name '.DS_Store' -type f -delete
+This needs to be run each time you go to set up PiDiNet calcualtion 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/18327074/129970337-bb467a8c-825e-47ee-872c-533f0a5da37a.jpg"><br>
 The results of our model look like this. The top image is the messy office table, the bottom image is the peaceful Saimaa lake in southeast of Finland.
