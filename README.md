@@ -51,7 +51,7 @@ To create NYUD dataset, please follow:
 1. create a folder */path/to/NYUD*,
 2. extract *NYUD.tar.gz* to */path/to/NYUD*,
 3. cp the \**.lst* files in [data/NYUD](data/NYUD) to */path/to/NYUD/*.
-4. There are already 4 checkpoint files included in this model in order to help get started with this model quciker. These contain the weights for your custom image run, and were generated on this dataset.
+4. There are already 4 checkpoint files included in this model in order to help get started with this model quicker. These contain the weights for your custom image run, and were generated on this dataset.
 
 ## Training, and Generating edge maps
 
